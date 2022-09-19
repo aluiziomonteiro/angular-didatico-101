@@ -3,16 +3,21 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
+import { ContactsListComponent } from './contacts/contacts-list.component';
+import { StarsComponent } from './stars/stars.component';
 
-@NgModule({               // <-- Decorator que indica que a classe é um módulo
-  declarations: [         // <-- Novos componentes devem ser declarados aqui
-    AppComponent              
+
+@NgModule({
+  declarations: [
+    AppComponent,
+    ContactsListComponent,
+    StarsComponent              
   ],
-  imports: [              // <-- Módulos necessários devem ser importados aqui
+  imports: [
     BrowserModule,
-    FormsModule           // <-- Adicionando o módulo de formulários na aplicação
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }  // <-- Nome da classe
+export class AppModule { }
