@@ -1,0 +1,94 @@
+<h3>Contact</h3>
+<hr />
+
+<form #contactForm="ngForm" *ngIf="contact">
+    <div class="form-group row">
+        <label class="col-sm-1 col-form-label">Image:</label>
+        <div class="col-sm-5">
+            <input type="text" name="image" class="form-control" 
+                [(ngModel)]="contact.image" #contactImage="ngModel"
+                [ngClass]="{'is-invalid': contactImage.invalid}" required>
+            <div class="invalid-feedback">
+                contact image is required
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label class="col-sm-1 col-form-label"> Name: </label>
+        <div class="col-sm-5">
+            <input type="text" name="name" class="form-control" 
+                [(ngModel)]="contact.name" #contactName="ngModel"
+                [ngClass]="{'is-invalid': contactName.invalid}" required>
+            <div class="invalid-feedback">
+                contact name is required
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label class="col-sm-1 col-form-label"> Phone: </label>
+        <div class="col-sm-5">
+            <input type="text" name="phone" class="form-control" 
+                [(ngModel)]="contact.phone" #contactPhone="ngModel"
+                [ngClass]="{'is-invalid': contactPhone.invalid}" required>
+            <div class="invalid-feedback">
+                contact phone is required
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label class="col-sm-1 col-form-label"> Email: </label>
+        <div class="col-sm-5">
+            <input type="email" name="email" class="form-control" 
+                [(ngModel)]="contact.email" #contactEmail="ngModel"
+                [ngClass]="{'is-invalid': contactEmail.invalid}" required>
+            <div class="invalid-feedback">
+                contact email is required
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label class="col-sm-1 col-form-label"> Date: </label>
+        <div class="col-sm-5">
+            <input type="date" name="date" class="form-control" 
+                [(ngModel)]="contact.date" #contactDate="ngModel"
+                [ngClass]="{'is-invalid': contactDate.invalid}" required>
+            <div class="invalid-feedback">
+                contact date is required
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label class="col-sm-1 col-form-label"> Description: </label>
+        <div class="col-sm-5">
+            <textarea name="description" class="form-control" 
+                [(ngModel)]="contact.description"
+                #contactDescription="ngModel" [ngClass]="{'is-invalid': contactDescription.invalid}" required>
+            </textarea>
+            <div class="invalid-feedback">
+                contact description is required
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label class="col-sm-1 col-form-label"> Rating: </label>
+        <div class="col-sm-5">
+            <input type="number" name="rating" class="form-control" 
+                min="0" max="5" step="0.1"
+                [(ngModel)]="contact.rating" #contactRating="ngModel" 
+                [ngClass]="{'is-invalid': contactRating.invalid}"
+                required>
+            <div class="invalid-feedback">
+                contact rating is required
+            </div>
+        </div>
+    </div>
+
+    <button class="btn btn-primary mr-2" [disabled]="contactForm.invalid">Save</button>
+    <button class="btn btn-secondary">Clear</button>
+</form>
