@@ -1,4 +1,6 @@
+import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
+import { Observable } from "rxjs";
 import { ContactsModel } from "./contacts.model";
 
 @Injectable({
@@ -6,21 +8,28 @@ import { ContactsModel } from "./contacts.model";
 })
 export class ContactsService {
 
-    returnAll(): ContactsModel[] {
-        return CONTACTS;
+    constructor(private http: HttpClient) { } // <-- Classe que contém os métodos de requisição
+
+    private URL: string = 'http://localhost:3000/contacts'; // <-- Endereço da API
+
+    returnAll(): Observable<ContactsModel[]> { // <-- Envelopa o retorno do método
+        return this.http.get<ContactsModel[]>(this.URL); // <-- Obtém a lista de contatos que está armazenada no endereço da URL
     }
 
-    returnById(contactId: number): ContactsModel {
-        return CONTACTS.find((contact: ContactsModel) => contact.id === contactId);
+    returnById(contactId: number): Observable<ContactsModel> {
+        return this.http.get<ContactsModel>(`${this.URL}/${contactId}`);
     }
 
-    save(contact: ContactsModel): void {
+    save(contact: ContactsModel): Observable<ContactsModel> {
         if (contact.id) {
-            const index = CONTACTS.findIndex((contactIterator: ContactsModel) =>
-                contactIterator.id === contact.id);
-
-            CONTACTS[index] = contact;
+            return this.http.put<ContactsModel>(`${this.URL}/${contact.id}`, contact);
+        } else {
+            return this.http.post<ContactsModel>(this.URL, contact);
         }
+    }
+
+    delete(contactId: number): Observable<any> {
+        return this.http.delete<any>(`${this.URL}/${contactId}`);
     }
 }
 

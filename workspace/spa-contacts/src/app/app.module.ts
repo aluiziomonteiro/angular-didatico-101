@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
@@ -25,6 +26,7 @@ import { ContactsInfoComponent } from './contacts/contacts-info.component';
   imports: [
     BrowserModule,
     FormsModule,
+    HttpClientModule,
     RouterModule.forRoot([
       {
         path: '', redirectTo: 'contacts', pathMatch: 'full'
@@ -34,6 +36,9 @@ import { ContactsInfoComponent } from './contacts/contacts-info.component';
       },
       {
         path: 'contacts/info/:id', component: ContactsInfoComponent
+      },
+      {
+        path: 'contacts/info', component: ContactsInfoComponent
       },
       {
         path: '**', component: Error404Component

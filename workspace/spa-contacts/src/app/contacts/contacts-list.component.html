@@ -40,6 +40,9 @@
                 <button 
                     class="btn btn-primary" 
                     [routerLink]="['/contacts/info', contact.id]">Info</button>
+                <button 
+                    (click)="delete(contact.id)" 
+                    class="btn btn-danger ml-2">Delete</button>
             </td>
         </tr>
     </tbody>
