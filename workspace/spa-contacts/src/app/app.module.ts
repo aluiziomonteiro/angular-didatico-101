@@ -1,49 +1,21 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http';
-
 import { AppComponent } from './app.component';
-import { FormsModule } from '@angular/forms';
-import { ContactsListComponent } from './contacts/contacts-list.component';
-import { StarsComponent } from './stars/stars.component';
-import { ReplacePipe } from './replace-pipe/replace.pipe';
+import { BrowserModule } from '@angular/platform-browser';
+import { ContactsModule } from './contacts/contacts.module';
+import { CoreModule } from './core/core.module';
+import { HttpClientModule } from '@angular/common/http';
+import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { Error404Component } from './error-404/error-404.component';
-import { NavBarComponent } from './nav-bar/nav-bar.component';
-import { ContactsInfoComponent } from './contacts/contacts-info.component';
-
 
 @NgModule({
   declarations: [
     AppComponent,
-    ContactsListComponent,
-    StarsComponent,
-    ReplacePipe,
-    Error404Component,
-    NavBarComponent,
-    ContactsInfoComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule,
+    ContactsModule,
+    CoreModule,
     HttpClientModule,
-    RouterModule.forRoot([
-      {
-        path: '', redirectTo: 'contacts', pathMatch: 'full'
-      },
-      {
-        path: 'contacts', component: ContactsListComponent
-      },
-      {
-        path: 'contacts/info/:id', component: ContactsInfoComponent
-      },
-      {
-        path: 'contacts/info', component: ContactsInfoComponent
-      },
-      {
-        path: '**', component: Error404Component
-      }
-    ])
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]

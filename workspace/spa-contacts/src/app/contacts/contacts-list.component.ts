@@ -1,4 +1,5 @@
 import { Component, OnInit } from "@angular/core";
+
 import { ContactsModel } from "./contacts.model";
 import { ContactsService } from "./contacts.service";
 
@@ -17,12 +18,12 @@ export class ContactsListComponent implements OnInit {
     }
 
     returnAll(): void {
-        this.contactsService.returnAll().subscribe({    // <-- Inscrição para receber novidades do Observable
-            next: contacts => { // <-- Será executada se tudo ocorrer bem
-                this._contacts = contacts;  // <-- Atribuindo a lista que chegou da requisição
+        this.contactsService.returnAll().subscribe({
+            next: contacts => {
+                this._contacts = contacts;
                 this.filteredContacts = this._contacts;
             },
-            error: e => {   // <-- Será executada se acontecer erros
+            error: e => {
                 console.log('Error in return list!', e);
             }
         });

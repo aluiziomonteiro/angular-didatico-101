@@ -1,4 +1,5 @@
 import { Component, OnInit } from "@angular/core";
+
 import { ActivatedRoute } from "@angular/router";
 import { ContactsModel } from "./contacts.model";
 import { ContactsService } from "./contacts.service";
@@ -15,9 +16,9 @@ export class ContactsInfoComponent implements OnInit {
     ngOnInit(): void {
         this.contactId = +this.activatedRoute.snapshot.params['id'];
 
-        if (this.contactId) {   // <-- Se existe id, carregue o contato existente
+        if (this.contactId) {
             this.returnById();
-        } else {                // <-- Se não existe id, então carregue um contato nulo
+        } else {
             this.createContactNull();
         }
     }
