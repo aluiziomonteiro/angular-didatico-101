@@ -21,7 +21,7 @@ code .
 
 ## Downloads Disponíveis
 
-- [x] [Parte - 1: Primeiros Passos]()
+- [x] [Parte - 1: Primeiros Passos](https://github.com/aluiziomonteiro/angular-didatico-101/archive/refs/heads/master.zip)
 - [ ] Parte - 2: Iniciando o Projeto[]()
 - [ ] Parte - 3: Trabalhando com Componentes
 - [ ] Parte - 4: Trabalhando com Vários Componentes
