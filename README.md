@@ -21,9 +21,9 @@ code .
 
 ## Downloads Disponíveis
 
-- [x] [Parte - 1: Primeiros Passos](https://github.com/aluiziomonteiro/angular-didatico-101/archive/refs/heads/master.zip)
-- [ ] Parte - 2: Iniciando o Projeto[]()
-- [ ] Parte - 3: Trabalhando com Componentes
+- [x] [Parte - 1: Primeiros Passos](https://github.com/aluiziomonteiro/angular-didatico-101/archive/4c0fbc0f0c9729df2bfaaa299a08621053fa5e30.zip)
+- [x] [Parte - 2: Iniciando o Projeto](https://github.com/aluiziomonteiro/angular-didatico-101/archive/0e758d1662b192d1028689c93fab8e7ba305188a.zip)
+- [ ] Parte - 3: Trabalhando com Componentes[]()
 - [ ] Parte - 4: Trabalhando com Vários Componentes
 - [ ] Parte - 5: Trabalhando com requisições HTTP
 - [ ] Parte - 6: Organizando a Aplicação
