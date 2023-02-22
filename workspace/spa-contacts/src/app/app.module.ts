@@ -1,11 +1,15 @@
 import { AppComponent } from './app.component';
 import { BrowserModule } from '@angular/platform-browser';
+import { ContactsListComponent } from './contacts/contacts-list.component';
 import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
+import { StarsComponent } from './stars/stars.component';
 
 @NgModule({ // Decorator. Indica que a classe é um módulo
   declarations: [ // Novos componentes serão declarados aqui
-    AppComponent 
+    AppComponent,
+    ContactsListComponent,
+    StarsComponent 
   ],
   imports: [ // Novos módulos serão daclarados aqui
     BrowserModule,

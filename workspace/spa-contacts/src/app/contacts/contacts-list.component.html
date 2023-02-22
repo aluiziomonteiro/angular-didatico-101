@@ -1,0 +1,35 @@
+<h3>Contacts List</h3>
+<hr />
+
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Image</th>
+            <th>Name</th>
+            <th>Phone</th>
+            <th>E-mail</th>
+            <th>Date</th>
+            <th>Description</th>
+            <th>Rating</th>
+            <th>Options</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let contact of contacts">
+            <td>{{contact.id}}</td>
+            <td>
+                <img [src]="contact.image" class="image">
+            </td>
+            <td>{{contact.name}}</td>
+            <td>{{contact.phone}}</td>
+            <td>{{contact.email}}</td>
+            <td>{{contact.date}}</td>
+            <td>{{contact.description}}</td>
+            <td>
+                <app-stars [rating]="contact.rating" [title]="contact.rating"></app-stars>
+            </td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>

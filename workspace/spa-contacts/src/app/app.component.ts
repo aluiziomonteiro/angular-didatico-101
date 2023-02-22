@@ -7,5 +7,4 @@ import { Component } from '@angular/core';
 })
 export class AppComponent { // Nome da classe
   title = 'spa-contacts';
-
 }
