@@ -24,7 +24,7 @@ code .
 - [x] [Parte - 1: Primeiros Passos](https://github.com/aluiziomonteiro/angular-didatico-101/archive/4c0fbc0f0c9729df2bfaaa299a08621053fa5e30.zip)
 - [x] [Parte - 2: Iniciando o Projeto](https://github.com/aluiziomonteiro/angular-didatico-101/archive/0e758d1662b192d1028689c93fab8e7ba305188a.zip)
 - [x] [Parte - 3: Trabalhando com Componentes](https://github.com/aluiziomonteiro/angular-didatico-101/archive/a5b620d721b5b8dc448b8303f8a1268973e4a531.zip)
-- [ ] Parte - 4: Trabalhando com Vários Componentes
+- [x] [Parte - 4: Trabalhando com Vários Componentes](https://github.com/aluiziomonteiro/angular-didatico-101/archive/38a03894a404777d890c0030d78a0e1e7c04fbaf.zip)
 - [ ] Parte - 5: Trabalhando com requisições HTTP
 - [ ] Parte - 6: Organizando a Aplicação
 - [ ] Parte - 7: Criação da API
@@ -32,6 +32,7 @@ code .
 ## Social
 <a href="https://www.youtube.com/channel/UCrGNdL0x8Za6OOGSknkbXXg"><img src="https://img.shields.io/badge/YouTube-%23FF0000.svg?style=for-the-badge&logo=YouTube&logoColor=white"></a>
 <a href="https://www.linkedin.com/in/aluizio-monteiro/"><img src="https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white"></a>
+<a href="https://www.instagram.com/angulardidatico/"><img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white"></a>
 
 
 ## Licença
